@@ -1,5 +1,4 @@
 const  mongoose  = require('mongoose');
-// Test shit out3
 const userSchema = new mongoose.Schema({
     email: {
         type: String,
