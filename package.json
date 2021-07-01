@@ -1,5 +1,5 @@
 {
-  "name": "schemaslul",
+  "name": "lul-schemas",
   "version": "1.0.0",
   "description": "Schemas of Level-Up used on BFFS",
   "main": "index.js",
