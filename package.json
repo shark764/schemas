@@ -17,7 +17,6 @@
   },
   "homepage": "https://gitlab.com/focus-ventures/level-up-entities#readme",
   "dependencies": {
-    "mongoose": "^5.13.0",
-    "validator": "^13.6.0"
+    "mongoose": "^5.13.0"
   }
 }

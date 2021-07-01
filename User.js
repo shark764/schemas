@@ -6,11 +6,6 @@ const userSchema = new mongoose.Schema({
         unique: true,
         required: true,
         trim: true,
-        validate(value) {
-            if (!validator.isEmail(value)) {
-                throw(errorObj(401));
-            }
-        }
     },
     password: {
         type: String,        
@@ -18,7 +13,6 @@ const userSchema = new mongoose.Schema({
     },
     businessName: {
         type: String,
-        //required: false,
         trim: true
     },
     firstName: {
