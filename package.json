@@ -1,0 +1,23 @@
+{
+  "name": "schemaslul",
+  "version": "1.0.0",
+  "description": "Schemas of Level-Up used on BFFS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/focus-ventures/level-up-entities.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/focus-ventures/level-up-entities/issues"
+  },
+  "homepage": "https://gitlab.com/focus-ventures/level-up-entities#readme",
+  "dependencies": {
+    "mongoose": "^5.13.0",
+    "validator": "^13.6.0"
+  }
+}
