@@ -1,51 +1,88 @@
-const  mongoose  = require('mongoose');
+const mongoose = require("mongoose");
+const { END_USER } = require("./configs");
 const userSchema = new mongoose.Schema({
-    email: {
-        type: String,
-        unique: true,
-        required: true,
-        trim: true,
+  userName: {
+    type: string,
+    trim: true,
+    unique: true,
+    required: true,
+  },
+  nickName: {
+    type: string,
+  },
+  email: {
+    type: String,
+    unique: true,
+    required: true,
+    trim: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  birthDate: {
+    type: Date,
+  },
+  location: {
+    type: { type: String, default: "Point" },
+    coordinates: [{ type: Number }],
+  },
+  lastLoginDate: {
+    type: Date,
+    default: Date.now(),
+  },
+ 
+  userProfile: {
+    about: {
+      type: String,
     },
-    password: {
-        type: String,        
-        required: false,
+    photo: {
+      type: String,
     },
-    businessName: {
-        type: String,
-        trim: true
+    coverPhoto: {
+      type: String,
     },
-    firstName: {
-        type: String,
-        required: false,
-        trim: true
-    },
-    lastName: {
-        type: String,
-        required: false,
-        trim: true
-    },
-    displayName: {
-        type: String,
-        required: false,
-        trim: true
-    }, 
-    providerId: {
-        type: String,
-        trim: true
-    },
-    provider: {
-        type: String,
-        trim: true
-    },
-    role: {
-        type: String,
-        default: 'Customer',
-        trim: true
-    },
-    active: {
-        type: Boolean,
-        default: false
-    }
-})
+  },
+  // This is roleId
+  role: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "roles",
+    default: END_USER,
+  },
 
-module.exports= userSchema
+  providerId: {
+    type: String,
+    trim: true,
+  },
+  provider: {
+    type: String,
+    trim: true,
+  },
+  // This is verifiedAccount
+  active: {
+    type: Boolean,
+    default: false,
+  },
+
+  // businessName: {
+  //     type: String,
+  //     trim: true
+  // },
+  // firstName: {
+  //     type: String,
+  //     required: false,
+  //     trim: true
+  // },
+  // lastName: {
+  //     type: String,
+  //     required: false,
+  //     trim: true
+  // },
+  // displayName: {
+  //     type: String,
+  //     required: false,
+  //     trim: true
+  // },
+},{timestamps: true});
+
+module.exports = userSchema;
