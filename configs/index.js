@@ -10,6 +10,7 @@ const PUBLIC = 'public';
 const PRIVATE = 'private';
 const FACILITY1= 'facility1';
 const FACILITY2 = 'facility2'
+const CARD = 'card';
 
 module.exports={
     END_USER,
@@ -22,5 +23,6 @@ module.exports={
     PRIVATE,
     FACILITY1,
     FACILITY2,
-    DEFAULT_LEAGUE
+    DEFAULT_LEAGUE,
+    CARD
 }
