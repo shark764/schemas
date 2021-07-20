@@ -24,12 +24,10 @@ const userMembershipSchema = new mongoose.Schema(
       type: Date,
       required: true,
     },
-
-    paymentMethodId: {
-      method: {
-        type: String,
-        default: CARD,
-      },
+    // this is paymentMethodId.
+    paymentMethod: {
+      type: String,
+      default: CARD,
     },
 
     price: {
