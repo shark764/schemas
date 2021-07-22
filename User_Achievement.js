@@ -8,7 +8,7 @@ const userAchievementsSchema = new mongoose.Schema(
       ref: "achievements",
       required: true,
     },
-
+    // this is userFacilitiesId
     userFacilityId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "user_facilities",

@@ -28,6 +28,10 @@ const userChallengeSchema = new mongoose.Schema({
     enum: [ACTIVE, PENDING, INACTIVE],
     default: PENDING,
   },
+
+  dateAccepted: {
+    type: Date,
+  },
 });
 
 module.exports = userChallengeSchema;
