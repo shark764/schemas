@@ -2,13 +2,13 @@ const mongoose = require("mongoose");
 const { END_USER } = require("./configs");
 const userSchema = new mongoose.Schema({
   userName: {
-    type: string,
+    type: String,
     trim: true,
     unique: true,
     required: true,
   },
   nickName: {
-    type: string,
+    type: String,
   },
   email: {
     type: String,

@@ -12,7 +12,7 @@ const goalCategorySchema = new mongoose.Schema(
     },
 
     status: {
-      type: string,
+      type: String,
       enum: [ACTIVE, INACTIVE],
       default: ACTIVE,
     },

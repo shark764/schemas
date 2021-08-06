@@ -24,7 +24,7 @@ const goalSchema = new mongooose.Schema({
     },
     // this is Status
     status:{
-        type: string,
+        type: String,
         enum: [ACTIVE, INACTIVE],
         default: ACTIVE,
     },
