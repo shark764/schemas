@@ -6,7 +6,7 @@ const facilitySchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-
+    
     description: {
       type: String,
     },
@@ -33,15 +33,15 @@ const facilitySchema = new mongoose.Schema(
     },
 
     phoneNumberSecondary: {
-      type: string,
+      type: String,
     },
 
     website: {
-      type: string,
+      type: String,
     },
 
     facilityType: {
-      type: string,
+      type: String,
       enum: [FACILITY1, FACILITY2],
       default: FACILITY1,
     },
@@ -49,11 +49,11 @@ const facilitySchema = new mongoose.Schema(
     socialMedia: [
       {
         name: {
-          type: string,
+          type: String,
           required: true
         },
         urlPath: {
-          type: string,
+          type: String,
         },
       },
     ],
@@ -61,15 +61,15 @@ const facilitySchema = new mongoose.Schema(
     facilityAdmin: [
       {
         name: {
-          type: string,
+          type: String,
           required: true
         },
         phone: {
-          type: string,
+          type: String,
           trim: true,
         },
         email: {
-          type: string,
+          type: String,
           trim: true,
         },
       },
@@ -78,15 +78,15 @@ const facilitySchema = new mongoose.Schema(
     facilityAssociate: [
       {
         name: {
-          type: string,
+          type: String,
           required: true
         },
         phone: {
-          type: string,
+          type: String,
           trim: true,
         },
         email: {
-          type: string,
+          type: String,
           trim: true,
         },
       },
