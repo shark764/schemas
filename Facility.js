@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { FACILITY1, FACILTIY2 } = require("./configs");
+const { FACILITY1, FACILITY2 } = require("./configs");
 const facilitySchema = new mongoose.Schema(
   {
     name: {
