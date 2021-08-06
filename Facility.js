@@ -108,11 +108,11 @@ const facilitySchema = new mongoose.Schema(
     amenities: [{ type: String }],
 
     buildingSize: {
-      type: number,
+      type: Number,
     },
 
     buildingSizeIncluding: {
-      type: number,
+      type: Number,
     },
 
     deletedAt: {
