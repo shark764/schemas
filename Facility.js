@@ -116,7 +116,7 @@ const facilitySchema = new mongoose.Schema(
     },
 
     deletedAt: {
-      type: date,
+      type: Date,
     },
 
     createdBy: {
