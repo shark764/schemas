@@ -14,7 +14,7 @@ const checkinSchema = new mongoose.Schema({
 
   users: [
     {
-      userId: {
+      _id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "users",
         required: true,
