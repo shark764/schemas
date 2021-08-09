@@ -5,7 +5,6 @@ const userSchema = new mongoose.Schema({
     type: String,
     trim: true,
     unique: true,
-    required: true,
   },
   nickName: {
     type: String,
@@ -47,7 +46,7 @@ const userSchema = new mongoose.Schema({
   role: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "roles",
-    default: END_USER,
+    default: mongoose.Types.ObjectId(END_USER),
   },
 
   providerId: {

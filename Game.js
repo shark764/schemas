@@ -8,7 +8,7 @@ const gameSchema = new mongoose.Schema({
   },
   leagueId: {
     type: mongoose.Schema.Types.ObjectId,
-    default: DEFAULT_LEAGUE
+    default: mongoose.Types.ObjectId(DEFAULT_LEAGUE)
   },
 
   controllerId: {
