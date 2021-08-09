@@ -46,7 +46,7 @@ const userSchema = new mongoose.Schema({
   role: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "roles",
-    default: mongoose.Types.ObjectId(END_USER),
+    default: END_USER,
   },
 
   providerId: {
