@@ -1,6 +1,9 @@
+const mongoose = require('mongoose')
+const {ObjectId} = mongoose.Types
 
-const END_USER = "60b69237f3f097429801b598";
-const DEFAULT_LEAGUE = "60b69b0bf3f097429801b59c";
+
+const END_USER = ObjectId("60b69237f3f097429801b598");
+const DEFAULT_LEAGUE = ObjectId("60b69b0bf3f097429801b59c");
 const ACTIVE = 'active';
 const INACTIVE = 'inactive'
 const PENDING = 'pending';
