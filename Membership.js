@@ -12,7 +12,7 @@ const membershipSchema = new mongoose.Schema(
       required: true,
     },
 
-    benefits: [{ description: String}],
+    benefits: [{ type: String}],
 
     validPeriod: {
       type: Number,
