@@ -3,7 +3,7 @@ const {ObjectId} = mongoose.Types
 
 
 const END_USER = ObjectId("60b69237f3f097429801b598");
-const DEFAULT_LEAGUE = ObjectId("60b69b0bf3f097429801b59c");
+const DEFAULT_LEAGUE = ObjectId("60d2bad25470d551cc870e8d");
 const ACTIVE = 'active';
 const INACTIVE = 'inactive'
 const PENDING = 'pending';

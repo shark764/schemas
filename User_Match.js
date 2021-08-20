@@ -1,17 +1,12 @@
 const mongoose = require("mongoose");
 
 const userMatchSchema = new mongoose.Schema({
-  // this is userFacilitiesId
-  userFacilityId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "user_facility",
-    required: true,
-  },
   score: {
     type: Number,
   },
-  gameId: {
+  userId: {
     type: mongoose.Schema.Types.ObjectId,
+    ref: "users",
     required: true,
   },
   power: {
