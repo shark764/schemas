@@ -1,11 +1,6 @@
 const mongoose = require("mongoose");
 const matchSchema = new mongoose.Schema(
   {
-    facilityId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "facilities",
-      required: true,
-    },
     gameId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "games",
