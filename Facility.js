@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { FACILITY1, FACILITY2 } = require("./configs");
+const { INDOOR,OUTDOOR,BOTH,FACEBOOK,INSTAGRAM,TWITER,TIKTOK} = require("./configs");
 const facilitySchema = new mongoose.Schema(
   {
     name: {
@@ -43,8 +43,8 @@ const facilitySchema = new mongoose.Schema(
 	//NEW FIELD FOR V2.10 of database
     facilityType: {
 		type: String,
-		enum: ["indoor", "outdoor", "both"],
-		default: "indoor",
+		enum: [INDOOR,OUTDOOR,BOTH],
+		default: INDOOR,
 	},
 
 	//NEW FIELD FOR V2.10 of database
@@ -52,7 +52,7 @@ const facilitySchema = new mongoose.Schema(
 		{
 			name: {
 				type: String,
-				enum: ["facebook", "instagram", "twitter", "tiktok"],
+				enum: [FACEBOOK,INSTAGRAM,TWITER,TIKTOK],
 			},
 			
 			urlPath: {
