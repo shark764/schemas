@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { FACILITY1, FACILITY2 } = require("./configs");
+const { INDOOR,OUTDOOR,BOTH,FACEBOOK,INSTAGRAM,TWITTER,TIKTOK} = require("./configs");
 const facilitySchema = new mongoose.Schema(
   {
     name: {
@@ -40,57 +40,27 @@ const facilitySchema = new mongoose.Schema(
       type: String,
     },
 
+	//NEW FIELD FOR V2.10 of database
     facilityType: {
-      type: String,
-      enum: [FACILITY1, FACILITY2],
-      default: FACILITY1,
-    },
+		type: String,
+		enum: [INDOOR,OUTDOOR,BOTH],
+		default: INDOOR,
+	},
 
+	//NEW FIELD FOR V2.10 of database
     socialMedia: [
-      {
-        name: {
-          type: String,
-          required: true
-        },
-        urlPath: {
-          type: String,
-        },
-      },
-    ],
-    // Shouldnt this be type user an array of ObjectId(users)?
-    facilityAdmin: [
-      {
-        name: {
-          type: String,
-          required: true
-        },
-        phone: {
-          type: String,
-          trim: true,
-        },
-        email: {
-          type: String,
-          trim: true,
-        },
-      },
-    ],
-    // Shouldnt this be type user an array of ObjectId(users)?
-    facilityAssociate: [
-      {
-        name: {
-          type: String,
-          required: true
-        },
-        phone: {
-          type: String,
-          trim: true,
-        },
-        email: {
-          type: String,
-          trim: true,
-        },
-      },
-    ],
+		{
+			name: {
+				type: String,
+				enum: [FACEBOOK,INSTAGRAM,TWITTER,TIKTOK],
+			},
+			
+			urlPath: {
+				type: String
+			},
+		},
+	],
+	
 
     pictures: [
       {
@@ -106,14 +76,6 @@ const facilitySchema = new mongoose.Schema(
     ],
 
     amenities: [{ type: String }],
-
-    buildingSize: {
-      type: Number,
-    },
-
-    buildingSizeIncluding: {
-      type: Number,
-    },
 
     deletedAt: {
       type: Date,
@@ -135,6 +97,85 @@ const facilitySchema = new mongoose.Schema(
       ref: "users",
     },
 
+	//NEW FIELD FOR V2.10 of database
+	nssfMember: {
+		type: Boolean,
+		default: false,
+	},
+
+	//NEW FIELD FOR V2.10 of database
+	nssfRating: {
+		type: Number,
+	},
+	
+	//NEW FIELD FOR V2.10 of database
+	facilityServices: [
+		{
+			iotEnabled: {
+				type: Boolean,
+				default: false,
+			},
+			
+			memberships: {
+				type: Boolean,
+				default: false,
+			},
+			
+			walkInUsers: {
+				type: Boolean,
+				default: false,
+			},
+			
+			firearmRentals: {
+				type: Boolean,
+				default: false,
+			},
+			
+			retailSales: {
+				type: Boolean,
+				default: false,
+			},
+			
+			cafeteria: {
+				type: Boolean,
+				default: false,
+			},
+			
+			training: {
+				type: Boolean,
+				default: false,
+			},
+			
+			privateEvents: {
+				type: Boolean,
+				default: false,
+			},
+			
+			organizedCompetition: {
+				type: Boolean,
+				default: false,
+			},
+			
+			corporateHospitality: [
+				{
+					conferenceFacilities: {
+						type: Boolean,
+						default: false,
+					},
+					
+					facilityRental: {
+						type: Boolean,
+						default: false,
+					},
+					
+					vipLounge: {
+						type: Boolean,
+						default: false,
+					},
+				},
+			],
+		},
+	],
     // MISSING
     // lineOfBussiness 
     // facilityLayoutIndoor 

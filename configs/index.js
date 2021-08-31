@@ -11,9 +11,16 @@ const USER = 'user'
 const FACILITY = 'facility'
 const PUBLIC = 'public';
 const PRIVATE = 'private';
-const FACILITY1= 'facility1';
-const FACILITY2 = 'facility2'
 const CARD = 'card';
+const INDOOR = 'indoor';
+const OUTDOOR = 'outdoor';
+const BOTH = 'both';
+const FACEBOOK = 'facebook';
+const INSTAGRAM = 'instagram';
+const TWITTER = 'twitter';
+const TIKTOK = 'tiktok';
+
+
 
 module.exports={
     END_USER,
@@ -24,8 +31,13 @@ module.exports={
     FACILITY,
     PUBLIC,
     PRIVATE,
-    FACILITY1,
-    FACILITY2,
     DEFAULT_LEAGUE,
-    CARD
+    CARD,
+    INDOOR,
+    OUTDOOR,
+    BOTH,
+    FACEBOOK,
+    INSTAGRAM,
+    TWITTER,
+    TIKTOK
 }
