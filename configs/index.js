@@ -17,7 +17,7 @@ const OUTDOOR = 'outdoor';
 const BOTH = 'both';
 const FACEBOOK = 'facebook';
 const INSTAGRAM = 'instagram';
-const TWITER = 'twitter';
+const TWITTER = 'twitter';
 const TIKTOK = 'tiktok';
 
 
@@ -31,8 +31,6 @@ module.exports={
     FACILITY,
     PUBLIC,
     PRIVATE,
-    FACILITY1,
-    FACILITY2,
     DEFAULT_LEAGUE,
     CARD,
     INDOOR,
@@ -40,6 +38,6 @@ module.exports={
     BOTH,
     FACEBOOK,
     INSTAGRAM,
-    TWITER,
+    TWITTER,
     TIKTOK
 }
