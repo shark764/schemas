@@ -29,18 +29,18 @@ const rolesSchema = new mongoose.Schema(
     },
 
     createdBy: {
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "users",
       required: true,
     },
 
     updatedBy: {
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "users",
     },
 
     deletedBy: {
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "users",
     },
   },
