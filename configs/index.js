@@ -4,6 +4,8 @@ const {ObjectId} = mongoose.Types
 
 const END_USER = ObjectId("60b69237f3f097429801b598");
 const DEFAULT_LEAGUE = ObjectId("60d2bad25470d551cc870e8d");
+const ADMIN_ROLE = '60b69237f3f097429801b595';
+const SADMIN_ROLE = '60b69237f3f097429801b597';
 const ACTIVE = 'active';
 const INACTIVE = 'inactive'
 const PENDING = 'pending';
@@ -39,5 +41,7 @@ module.exports={
     FACEBOOK,
     INSTAGRAM,
     TWITTER,
-    TIKTOK
+    TIKTOK,
+    ADMIN_ROLE,
+    SADMIN_ROLE
 }
